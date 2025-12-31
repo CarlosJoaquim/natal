@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refúgio Espiritual para Eunice - Presente de Natal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/natal.css">
+    <link rel="stylesheet" href="css/diario-aprimorado.css">
+    <link rel="stylesheet" href="css/historias.css">
+</head>
+<body>
+    <!-- Luzes Natalinas -->
+    <div class="luzes" id="luzes"></div>
+    
+    <!-- Efeito de Neve -->
+    <div class="neve" id="neve"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-star-of-david"></i>
+                <h1>Refúgio Espiritual</h1>
+                <i class="fas fa-dove"></i>
+            </div>
+            
+            <nav>
+                <ul id="menu">
+                    <li><a href="#dedicatoria" class="nav-link active" data-section="dedicatoria"><i class="fas fa-gift"></i> Presente</a></li>
+                    <li><a href="#biblia" class="nav-link" data-section="biblia"><i class="fas fa-bible"></i> Bíblia</a></li>
+                    <li><a href="#oracao" class="nav-link" data-section="oracao"><i class="fas fa-pray"></i> Conversar com Deus</a></li>
+                    <li><a href="#historias" class="nav-link" data-section="historias"><i class="fas fa-book-open"></i> Histórias de Fé</a></li>
+                    <li><a href="#mama" class="nav-link" data-section="mama"><i class="fas fa-home"></i> Este Lugar é da Mamã</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Dedicatória -->
+        <section id="dedicatoria" class="section active">
+            <div class="section-header">
+                <i class="fas fa-heart"></i>
+                <h2>Um Presente Especial  </h2>
+            </div>
+            
+            <div class="dedicatoria-container">
+                <div class="dedicatoria-texto">
+                    <p>Mamã ,</p>
+                    <p>existem pessoas que são fáceis de presentear… e existem aquelas que são tão especiais que nenhum presente parece suficiente.</p>
+                    <p>Quando pensei em te oferecer algo, percebi que não fazia sentido escolher algo comum, algo material ou algo passageiro. Porque a tua força nunca foi comum. O teu amor nunca foi raso. E a tua fé nunca foi pequena.</p>
+                    <p>Então eu pensei: se existe algo que te define, é a tua ligação com Deus. A forma como confias, como oras, como acreditas, mesmo quando tudo pesa, mesmo quando o mundo exige mais do que parece justo. Há momentos em que carregas tudo nos ombros — responsabilidades, dores, silêncios — e ainda assim permaneces firme, com o coração cheio de fé. Muitos não aguentariam da mesma forma. Tu aguentas.</p>
+                    <p>Por isso, este presente não é apenas um site. É um lugar.</p>
+                    <p>Um lugar onde podes conversar com Deus. Um lugar onde a Palavra está sempre aberta. Um lugar onde histórias de fé fortalecem o espírito. Um lugar feito só para ti.</p>
+                    <p>Aqui está uma Bíblia viva, sempre disponível, em português, para te acompanhar em qualquer momento. Aqui estão histórias que lembram que a fé move o impossível. Aqui está um espaço de paz, criado com amor, para te lembrar todos os dias da mulher forte e inspiradora que tu és.</p>
+                    <p>Este é o meu presente de Natal para ti. Simples, mas profundo. Digital, mas cheio de sentimento. Porque quando não se sabe o que oferecer a alguém tão especial, a melhor escolha é oferecer aquilo que alimenta a alma.</p>
+                    <div class="assinatura">
+                        <p>Com amor, respeito e admiração.</p>
+                        <p>💙</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bíblia Sagrada -->
+        <section id="biblia" class="section">
+            <div class="section-header">
+                <i class="fas fa-bible"></i>
+                <h2>Bíblia Sagrada</h2>
+            </div>
+            
+            <div class="biblia-container">
+                <div class="biblia-selectores">
+                    <select id="livro">
+                        <option value="">Selecione um livro</option>
+                    </select>
+                    
+                    <select id="capitulo">
+                        <option value="">Selecione um capítulo</option>
+                    </select>
+                    
+                    <select id="versiculo">
+                        <option value="">Selecione um versículo</option>
+                    </select>
+                </div>
+                
+                <div class="botoes-biblia">
+                    <button id="ler-capitulo" class="btn btn-primario">
+                        <i class="fas fa-book-reader"></i> Ler Capítulo
+                    </button>
+                    <button id="sugerir-versiculo" class="btn btn-secundario">
+                        <i class="fas fa-lightbulb"></i> Sugestão de Passagem
+                    </button>
+                    <button id="modo-leitura" class="btn btn-primario">
+                        <i class="fas fa-glasses"></i> Modo Leitura
+                    </button>
+                </div>
+                
+                <div id="versiculo-display" class="versiculo-container">
+                    <div class="versiculo-texto">
+                        Clique em "Ler Capítulo" ou "Sugestão de Passagem" para começar.
+                    </div>
+                    <div class="versiculo-referencia">
+                        João 3:16
+                    </div>
+                </div>
+                
+                <div id="sugestoes-container" style="display: none;">
+                    <h3>Versículos Sugeridos</h3>
+                    <div id="lista-sugestoes"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Conversar com Deus -->
+        <section id="oracao" class="section">
+            <div class="section-header">
+                <i class="fas fa-pray"></i>
+                <h2>Conversar com Deus</h2>
+            </div>
+            
+            <div class="oracao-container">
+                <p>Este é o seu espaço pessoal para escrever pensamentos, orações, agradecimentos ou qualquer coisa que queira partilhar com Deus. É como um diário espiritual, só seu.</p>
+                
+                <textarea id="texto-oracao" placeholder="Escreva aqui a sua oração, pensamento ou agradecimento..."></textarea>
+                
+                <div class="botoes-biblia">
+                    <button id="salvar-oracao" class="btn btn-primario">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                    <button id="limpar-oracao" class="btn btn-secundario">
+                        <i class="fas fa-eraser"></i> Limpar
+                    </button>
+                </div>
+                
+                <div id="mensagem-biblica" class="mensagem-biblica">
+                    <!-- Mensagem bíblica aparecerá aqui -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Histórias de Fé -->
+        <section id="historias" class="section">
+            <div class="section-header">
+                <i class="fas fa-book-open"></i>
+                <h2>Histórias de Fé</h2>
+            </div>
+            
+            <div class="historias-container">
+                <div class="categoria-historias">
+                    <div class="categoria-titulo">
+                        <i class="fas fa-church"></i>
+                        <h3>Histórias Bíblicas</h3>
+                    </div>
+                    <div id="historias-biblicas">
+                        <!-- Histórias carregadas via API -->
+                    </div>
+                </div>
+                
+                <div class="categoria-historias">
+                    <div class="categoria-titulo">
+                        <i class="fas fa-globe"></i>
+                        <h3>Histórias Reais de Fé</h3>
+                    </div>
+                    <div id="historias-reais">
+                        <!-- Histórias carregadas via API -->
+                    </div>
+                </div>
+                
+                <div class="categoria-historias">
+                    <div class="categoria-titulo">
+                        <i class="fas fa-bookmark"></i>
+                        <h3>Histórias Selecionadas</h3>
+                    </div>
+                    <div id="historias-selecionadas">
+                        <!-- Histórias carregadas localmente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Este Lugar é da Mamã -->
+        <section id="mama" class="section">
+            <div class="lugar-mama-container">
+                <i class="fas fa-home"></i>
+                <h2>Este Lugar é da Mamã</h2>
+                <p>Este espaço foi criado exclusivamente para você,  Mamã. É o seu refúgio espiritual pessoal, onde pode encontrar paz, força e conexão com Deus sempre que precisar.</p>
+                <p>Que este lugar digital lhe traga a mesma acolhida e conforto que você proporciona a todos ao seu redor. Aqui, a fé é a porta, o amor é a luz e a paz é o fundamento.</p>
+                <p>Você é uma mulher forte, inspiradora e cheia de fé. Este lugar reflete a beleza da sua espiritualidade e serve como lembrete do quanto você é amada e valorizada.</p>
+                <p style="margin-top: 30px; font-style: italic; color: var(--dourado);">"Porque onde estiver o teu tesouro, aí estará também o teu coração." - Mateus 6:21</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Refúgio Espiritual para Mamã Eunice - Presente de Natal 2025</p>
+            <p>Criado com amor, fé e gratidão</p>
+            
+           
+        </div>
+    </footer>
+    
+    <!-- Áudio de Fundo -->
+  
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/animacoes.js"></script>
+<script src="js/biblia.js"></script>
+<script src="js/sugestoes.js"></script>
+<script src="js/oracao.js"></script>
+<!-- O sistema de histórias deve vir por último -->
+<script src="js/historias-api.js"></script>
+</body>
+</html>

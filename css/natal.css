@@ -1,0 +1,116 @@
+/* Efeitos de Neve */
+.neve {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floco {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: neveCaindo linear infinite;
+}
+
+@keyframes neveCaindo {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Luzes Natalinas */
+.luzes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.luz {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: piscar 2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Decorações Natalinas */
+.decoracao-natal {
+    position: fixed;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.estrela {
+    position: fixed;
+    color: var(--dourado);
+    font-size: 2rem;
+    opacity: 0.7;
+    animation: brilhar 3s infinite alternate;
+}
+
+@keyframes brilhar {
+    from { opacity: 0.3; transform: scale(1); }
+    to { opacity: 1; transform: scale(1.2); }
+}
+
+/* Modo Leitura Especial para Natal */
+.modo-leitura-natal {
+    background: linear-gradient(135deg, #f8f4e6 0%, #e8f4f8 100%);
+    border-left: 8px solid var(--verde-natal);
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.9;
+}
+
+/* Elementos Decorativos Especiais */
+.pinho-natal {
+    position: relative;
+    padding-left: 40px;
+}
+
+.pinho-natal:before {
+    content: "🎄";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+.coracao-natal {
+    position: relative;
+    padding-left: 40px;
+}
+
+.coracao-natal:before {
+    content: "❤️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+/* Fundo especial para a dedicatória */
+.dedicatoria-natal {
+    background-image: url('../assets/img/natal-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.9);
+}

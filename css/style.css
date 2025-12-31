@@ -1,0 +1,591 @@
+:root {
+    --dourado: #D4AF37;
+    --dourado-claro: #F5E8B0;
+    --azul-suave: #E8F4F8;
+    --azul-escuro: #2C3E50;
+    --branco: #FFFFFF;
+    --vermelho-discreto: #A52A2A;
+    --verde-natal: #0A5C36;
+    --sombra: rgba(0, 0, 0, 0.1);
+    --transicao: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--azul-suave);
+    color: var(--azul-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--verde-natal);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header e Navegação */
+header {
+    background: linear-gradient(135deg, var(--verde-natal) 0%, var(--azul-escuro) 100%);
+    color: var(--branco);
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 12px var(--sombra);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo i {
+    font-size: 2.2rem;
+    color: var(--dourado);
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    color: var(--dourado-claro);
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.section {
+    background-color: var(--branco);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px var(--sombra);
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--dourado-claro);
+}
+
+.section-header i {
+    font-size: 2rem;
+    color: var(--dourado);
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+}
+
+/* Dedicatória */
+.dedicatoria-container {
+    position: relative;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 92, 54, 0.1) 100%);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.dedicatoria-texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--azul-escuro);
+    text-align: justify;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.assinatura {
+    text-align: right;
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: var(--vermelho-discreto);
+}
+
+/* Bíblia */
+.biblia-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.biblia-selectores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--dourado);
+    background-color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--azul-escuro);
+    flex: 1;
+    min-width: 200px;
+}
+
+.botoes-biblia {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primario {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+}
+
+.btn-primario:hover {
+    background-color: var(--dourado-claro);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secundario {
+    background-color: var(--verde-natal);
+    color: var(--branco);
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(10, 92, 54, 0.3);
+}
+
+.versiculo-container {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--dourado);
+    margin-top: 20px;
+}
+
+.versiculo-texto {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--azul-escuro);
+}
+
+.versiculo-referencia {
+    text-align: right;
+    font-weight: 500;
+    color: var(--verde-natal);
+}
+
+/* Conversar com Deus */
+.oracao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--dourado);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    resize: vertical;
+    background-color: #fdfdfd;
+}
+
+.mensagem-biblica {
+    background-color: rgba(212, 175, 55, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--verde-natal);
+    display: none;
+}
+
+.mensagem-biblica.mostrar {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+/* Histórias de Fé */
+.historias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.categoria-historias {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.categoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--verde-natal);
+}
+
+.historia-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.historia-item:hover {
+    background-color: rgba(212, 175, 55, 0.05);
+    padding-left: 25px;
+}
+
+.historia-titulo {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--azul-escuro);
+}
+
+/* Este Lugar é da Mamã */
+.lugar-mama-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.lugar-mama-container i {
+    font-size: 4rem;
+    color: var(--dourado);
+    margin-bottom: 20px;
+}
+
+.lugar-mama-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--vermelho-discreto);
+}
+
+.lugar-mama-container p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--azul-escuro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.controles-audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-audio {
+    background-color: var(--dourado);
+    color: var(--azul-escuro);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transicao);
+}
+
+.btn-audio:hover {
+    background-color: var(--dourado-claro);
+    transform: scale(1.1);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .biblia-selectores {
+        flex-direction: column;
+    }
+    
+    select {
+        min-width: 100%;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .dedicatoria-texto {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+
+/* Estilos básicos para as novas funcionalidades */
+.loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1001;
+    animation: slideIn 0.3s ease;
+}
+
+.notification-info { background: #3498db; }
+.notification-success { background: #2ecc71; }
+.notification-warning { background: #f39c12; }
+.notification-error { background: #e74c3c; }
+
+.notification button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.verse-item {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+.verse-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #f8f9fa;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.verse-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-nav {
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-nav:hover {
+    background: #e9ecef;
+}
+
+.reading-mode {
+    background: #f5f5dc;
+    color: #333;
+}
+
+.reading-mode .versiculo-display {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.empty-state, .error-state {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.empty-state i, .error-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #dee2e6;
+}
+
+.btn-retry {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
